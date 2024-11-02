@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Arreglamos las cosas?</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 8px;
+            border: none;
+            color: #fff;
+        }
+        .yes {
+            background-color: #4caf50;
+        }
+        .no {
+            background-color: #f44336;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>¿Podemos arreglar las cosas? 🥺</h1>
+        <div class="buttons">
+            <button class="yes" onclick="confirmYes()">Sí</button>
+            <button class="no" onmouseover="moveButton()">No</button>
+        </div>
+    </div>
+
+    <script>
+        function confirmYes() {
+            alert("¡Gracias! Sabía que podíamos arreglarlo 😊");
+        }
+
+        function moveButton() {
+            const button = document.querySelector('.no');
+            button.style.top = Math.random() * (window.innerHeight - 50) + 'px';
+            button.style.left = Math.random() * (window.innerWidth - 100) + 'px';
+        }
+    </script>
+
+</body>
+</html>
